@@ -111,7 +111,8 @@ const Login = () => {
               value={input.adminPassword}
               name="adminPassword"
               onChange={changeEventHandler}
-              placeholder="********"
+              placeholder="For admin password, go to 'Contact Us' and drop a message "
+              className="placeholder:text-xs placeholder:italic"
             ></Input>
           </div>
 
