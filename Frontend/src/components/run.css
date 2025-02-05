@@ -1,0 +1,24 @@
+/* message to get the admin password */
+
+@keyframes marquee {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .marquee-container {
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;  /* Adjusted for smoother scrolling */
+  }
+  

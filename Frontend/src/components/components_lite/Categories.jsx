@@ -1,4 +1,7 @@
-import React from "react";
+import { setSearchedQuery } from "@/redux/jobSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -6,11 +9,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import { Button } from "../ui/button";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { setSearchedQuery } from "@/redux/jobSlice";
  
+// //css
+import '../run.css';
+
 
  
 const Category = [
@@ -47,6 +49,18 @@ const Categories = () => {
         <p className="text-center text-gray-600">
           Explore our extensive job market.
         </p>
+
+
+        {/* added continous message as of now during testing in further updateswill remove it */}
+        <div className="relative w-full mt-4 flex justify-center">
+    <div className="marquee-container">
+      <p className="marquee-text text-2xl font-bold text-indigo-600">
+        🚀 Find Your Dream Job | Apply Now | Top Companies Hiring! 🚀
+      </p>
+    </div>
+  </div>
+
+
       </div>
       <Carousel className="w-full   max-w-xl  mx-auto my-10">
         <CarouselContent>
