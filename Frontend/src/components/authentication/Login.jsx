@@ -58,14 +58,20 @@ const Login = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="flex items-center justify-center max-w-7xl mx-auto">
+      <div className="flex items-center justify-center max-w-6xl mx-auto mt-8
+                bg-white p-10 rounded-2xl shadow-[10px_10px_20px_rgba(0,0,0,0.3)] 
+                transform transition-all duration-300 hover:scale-105 hover:shadow-[15px_15px_25px_rgba(0,0,0,0.4)]">
         <form
           onSubmit={submitHandler}
           className="w-1/2 border border-gray-500 rounded-md p-4 my-10"
         >
-          <h1 className="font-bold text-xl mb-5 text-center text-blue-600">
+          <h1 className="font-extrabold text-3xl text-center text-blue-600 
+               drop-shadow-[3px_3px_5px_rgba(0,0,0,0.5)] 
+               bg-gradient-to-r from-blue-500 to-indigo-600 
+               text-transparent bg-clip-text">
             Login
           </h1>
+
           <div className="my-2">
             <Label>Email</Label>
             <Input
@@ -155,7 +161,7 @@ const Login = () => {
             <p className="text-gray-700  text-center my-2">
               Create new Account{" "}
               <Link to="/register" className="text-blue-700">
-                <button className=" w-1/2 py-3 my-3 text-white flex items-center justify-center max-w-7xl mx-auto bg-green-600 hover:bg-green-800/90 rounded-md">
+                <button className=" w-1/2 py-3 my-3 text-white flex items-center justify-center max-w-7xl mx-auto bg-red-600  hover:bg-red-700 rounded-md">
                   Register
                 </button>
               </Link>

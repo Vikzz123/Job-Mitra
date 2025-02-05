@@ -78,7 +78,7 @@ const Navbar = () => {
             <div className=" flex items-center gap-2">
               <Link to={"/login"}>
                 {" "}
-                <Button variant="outline">Login</Button>
+                <Button variant="outline" className="bg-blue-300 hover:bg-blue-500/90" >Login</Button>
               </Link>
               <Link to={"/register"}>
                 {" "}

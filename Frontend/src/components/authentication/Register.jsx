@@ -77,12 +77,17 @@ const Register = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="flex items-center justify-center max-w-7xl mx-auto">
+      <div className="flex items-center justify-center max-w-6xl mx-auto mt-8
+                bg-white p-10 rounded-2xl shadow-[10px_10px_20px_rgba(0,0,0,0.3)] 
+                transform transition-all duration-300 hover:scale-105 hover:shadow-[15px_15px_25px_rgba(0,0,0,0.4)]">
         <form
           onSubmit={submitHandler}
           className="w-1/2 border border-gray-500 rounded-md p-4 my-10"
         >
-          <h1 className="font-bold text-xl mb-5 text-center text-blue-600">
+          <h1 className="font-extrabold text-3xl text-center text-blue-600 
+               drop-shadow-[3px_3px_5px_rgba(0,0,0,0.5)] 
+               bg-gradient-to-r from-red-500 to-red-600 
+               text-transparent bg-clip-text">
             Register
           </h1>
           <div className="my-2">
