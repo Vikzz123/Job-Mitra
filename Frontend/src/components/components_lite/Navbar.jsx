@@ -3,13 +3,16 @@ import { USER_API_ENDPOINT } from "@/utils/data";
 import axios from "axios"; // Import axios
 import { LogOut, User2 } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { Avatar, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 
 const Navbar = () => {
+  //To keep the colour on List
+  const location = useLocation(); // Get current route path
+
   const { user } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -38,7 +41,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16">
         <div>
         <h1 className="text-4xl font-extrabold tracking-wide relative">
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-500 text-transparent bg-clip-text drop-shadow-[2px_2px_3px_rgba(0,0,0,0.6)]">
+          <span className="bg-gradient-to-r text-6xl from-purple-600 to-indigo-500 text-transparent bg-clip-text drop-shadow-[2px_2px_3px_rgba(0,0,0,0.6)]">
             Job
           </span>{" "}
           <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text drop-shadow-[2px_2px_3px_rgba(0,0,0,0.6)]">
@@ -61,21 +64,29 @@ const Navbar = () => {
               <>
                 <li>
                   {" "}
-                  <Link to={"/Home"}>Home</Link>
+                  <Link to={"/Home"}  className={`text-white py-2 px-4 rounded-full transition-all hover:bg-blue-600 hover:scale-150 hover:shadow-lg ${
+                   location.pathname === "/Home" ? "bg-purple-600" : "bg-blue-500"
+                 }`}>Home</Link>
                 </li>
                 <li>
                   {" "}
-                  <Link to={"/Browse"}>Browse</Link>{" "}
+                  <Link to={"/Browse"} className={`text-white py-2 px-4 rounded-full transition-all hover:bg-blue-600 hover:scale-105 hover:shadow-lg ${
+                   location.pathname === "/Browse" ? "bg-purple-600" : "bg-blue-500"
+                 }`}>Browse</Link>{" "}
                 </li>
                 <li>
                   {" "}
-                  <Link to={"/Jobs"}>Jobs</Link>
+                  <Link to={"/Jobs"} className={`text-white py-2 px-4 rounded-full transition-all hover:bg-blue-600 hover:scale-105 hover:shadow-lg ${
+                   location.pathname === "/Jobs" ? "bg-purple-600" : "bg-blue-500"
+                 }`}>Jobs</Link>
                 </li>
                  
                {/* contact link */}
                 <li>
                   {" "}
-                  <Link to={"/Contact"}>Contact Us</Link>
+                  <Link to={"/Contact"} className={`text-white py-2 px-4 rounded-full transition-all hover:bg-blue-600 hover:scale-105 hover:shadow-lg ${
+                   location.pathname === "/Contact" ? "bg-purple-600" : "bg-blue-500"
+                 }`}>Contact Us</Link>
                 </li>
               </>
             )}
@@ -84,7 +95,7 @@ const Navbar = () => {
             <div className=" flex items-center gap-2">
               <Link to={"/login"}>
                 {" "}
-                <Button variant="outline" className="bg-blue-300 hover:bg-blue-500/90" >Login</Button>
+                <Button variant="outline" className="bg-green-600 hover:bg-green-700 ">Login</Button>
               </Link>
               <Link to={"/register"}>
                 {" "}

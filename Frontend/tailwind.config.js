@@ -50,7 +50,21 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+
+		//added animation and keyframes
+		animation: {
+			bounceUp: 'bounceUp 0.5s ease-in-out',
+		},
+		  keyframes: {
+			bounceUp: {
+			  '0%': { transform: 'translateY(0)' },
+			  '30%': { transform: 'translateY(-5px)' },
+			  '50%': { transform: 'translateY(0)' },
+			  '70%': { transform: 'translateY(-3px)' },
+			  '100%': { transform: 'translateY(0)' },
+			},
+		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
