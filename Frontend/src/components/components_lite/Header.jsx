@@ -31,7 +31,7 @@ const Header = () => {
 
           <h2 className="text-5xl font-bold">
             Search Apply & <br />
-            Land Your <span className="text-[#6A38C2]">Dream Job</span>
+            Land Your <span className="text-[#6A38C2] typing-animation">Dream Job</span>
           </h2>
 
           <p>

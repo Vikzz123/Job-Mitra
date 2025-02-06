@@ -23,4 +23,22 @@
   }
   
 
-  
+
+/* added job categoreies to move from left to right */
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-marquee {
+  display: flex;
+  gap: 20px; /* Adds spacing between items */
+  animation: carousel-scroll 10s linear infinite; /* Runs the animation */
+}
+
+
+

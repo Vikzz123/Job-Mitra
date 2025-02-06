@@ -59,7 +59,7 @@ const Categories = () => {
            Browse through a wide range of career opportunities.
         </p>
       </div>
-      <Carousel className="w-full   max-w-xl  mx-auto my-10">
+      {/* <Carousel className="w-full   max-w-xl  mx-auto my-10">
         <CarouselContent>
           {Category.map((category, index) => {
             return (
@@ -73,7 +73,20 @@ const Categories = () => {
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
-      </Carousel>
+      </Carousel> */}
+
+<Carousel className="w-full max-w-xl mx-auto my-10 overflow-hidden relative">
+  <CarouselContent className="flex carousel-marquee">
+    {Category.map((category, index) => (
+      <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 flex-shrink-0">
+        <Button onClick={() => searchjobHandler(category)}>{category}</Button>
+      </CarouselItem>
+    ))}
+  </CarouselContent>
+  <CarouselPrevious />
+  <CarouselNext />
+</Carousel>
+
     </div>
   );
 };
